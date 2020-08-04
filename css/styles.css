@@ -1,0 +1,245 @@
+
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+
+body{
+    width: 100%;
+    min-height: 900px;
+    background: url(img/emblem.jpg);
+}
+
+
+
+/*
+.cabecera{
+    width: 100%;
+    background: darkseagreen;
+    height: 150px;
+}
+
+.cabecera h1{
+    width: 600px;
+    padding-top: 20px;
+    margin-left: 400px;
+    text-align: center;
+    font-size: 36px;   
+    text-shadow: 2px 2px 2px  darkgreen;
+    color:  rgb(6, 39, 6);
+}*/
+.cabecera{
+    width: 100%;
+}
+
+.row{
+    border: 1px solid black;
+}
+
+.logo img{
+    
+    width: 100px;
+    height: 100px;
+}
+
+.barra{
+    
+    font-size: 22px;
+}
+
+.barra ul{
+    
+    margin-top: 20px;
+}
+
+.barra ul li{
+    
+    display: inline-block ;
+    padding: 0px 40px 0px 40px;
+    letter-spacing: 1px;
+    line-height: 50px;
+    transition: all 200ms;
+    border-radius: 3px;
+
+}
+
+.barra ul li a{
+    display: block;
+    color: #17a2b8;
+    text-decoration: none;
+    transition: all 200ms;
+}
+
+
+.barra > ul > li > a:hover{
+    color: rgb(32, 170, 32);
+    transform: scale(1.2, 1.2);
+}
+
+/*central*/
+
+
+.central{
+    min-height: 1000px;
+    /*background: url(img/cesped.jpg);*/
+}
+
+.centralregistro{
+    min-height: 500px;
+}
+
+
+/*textarea*/
+.area{
+    max-height: 250px;
+    min-height: 303px;
+}
+
+/*formulario*/
+.etiqueta {
+
+    font-size: 18px;
+}
+
+
+/* slider*/
+
+
+#slider{
+    width: 600;
+    height: 450px;
+    overflow: hidden;
+
+}
+
+/*pagination
+
+.paginas{
+    margin-top: 80px;
+    margin-bottom: -50px;
+    height: 20px;
+   
+}*/
+
+.twitter{
+    max-height: 850px;
+    overflow: auto;
+}
+
+#mensajeEnviado {
+    display: none;
+}
+
+#imagen{
+    width: 187px;
+    height: 275px;
+}
+
+/*responsive*/
+
+@media (min-width: 576px) { 
+    .footer2{
+        font-size: 15px;
+    }
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .footer1{
+        font-size: 30px;
+    }
+    
+    .footer2{
+        font-size: 20px;
+    }
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+    .footer1{
+        font-size: 22px;
+    }
+    
+    .footer2{
+        font-size: 15px;
+    }
+ }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 100%;
+
+    
+ }
+
+ .footer1{
+    font-size: 30px;
+}
+
+.footer2{
+    font-size: 17px;
+    margin-left: 40px;
+}
+
+}
+
+
+
+
+
+
+
+
+/*
+@media (max-width: 1555px){
+
+    .barra{
+        font-size: 20px;
+    }
+
+    .titulo{
+        font-size:35px;
+    }
+
+    
+
+ 
+    
+
+    }
+
+    
+
+
+@media (max-width: 1320px){
+
+    .barra{
+        font-size: 15px;
+    }
+
+    .titulo{
+        font-size:32px;
+    }
+
+    .barra > ul > li > a:hover{
+        
+        transform: scale(1.8, 1.8);
+    }
+
+    #slider{
+        
+        height: 300px;
+        overflow: hidden;
+    
+    }
+  
+
+    } */
+
+

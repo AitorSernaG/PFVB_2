@@ -1,0 +1,65 @@
+
+    <%- include('partials/navigation.ejs'); -%>
+
+       <!--INICIO row central-->
+       <div class="row central border-0">
+       
+        <!--contenido del formulario-->
+        <div class="col col-xs-12 col-md-10 col-xl-8  m-5 mx-auto border border-secondary bg-dark ">
+            
+           
+            <form class="form-horizontal text-white mt-5 content-center" id="formulario" method="post" action="/contacto_datos" >
+                
+                <div class="form-group col-xs-12 col-sm-12 col-xl-12 mx-auto">
+                    <h1 class="text-center mb-2">Formulario de registro en la peña</h1>
+                    <h5 class="text-center mb-5">Introduce tus datos en el siguiente formulario y pasarás a formar parte de nuestra base de datos</h5>
+                </div>
+
+                <div class="form-group col-xs-12 col-sm-10 col-xl-8 mx-auto">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Introduce tu nombre" name="nombre" required>
+                </div>
+                <div class="form-group col-xs-12 col-sm-10 col-xl-8 mx-auto">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" class="form-control" id="apellidos" placeholder="Introduce tus apellidos" name="apellidos" required>
+                </div>
+                <div class="form-group col-xs-12 col-sm-10 col-xl-8 mx-auto">
+                    <label for="poblacion">Poblacion:</label>
+                    <input type="text" class="form-control" id="poblacion" placeholder="Introduce tu poblacion" name="poblacion" required>
+                </div>
+                <div class="form-group col-xs-12 col-sm-10 col-xl-8 mx-auto">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Introduce tu email" name="email" required>
+                </div>
+                <div class="form-group col-xs-12 col-sm-10 col-xl-8 mx-auto mb-4">
+                    <label for="telefono">Telefono:</label>
+                    <input type="text" class="form-control" id="telefono" placeholder="Introduce tu telefono" name="telefono" required>
+                </div>
+                <div class="form-group col-xs-12 col-sm-10 col-xl-8 mx-auto">
+                    <button type="submit" class="btn btn-info btn-block" id="enviar" disabled >Registrarme en la peña</button>
+                </div>
+
+                <div class="alert alert-success col-xs-12 col-sm-10 col-xl-8 mx-auto text-center " id="mensajeEnviado">
+                    <h3>Datos guardados correctamente</h3>
+                </div>
+
+                <h5 class="text-center mt-4">Si quieres borrarte de nuestra peña click en el boton rojo</h5>
+                <div class="form-group col-xs-12 col-sm-10 col-xl-8 mx-auto">
+                    <button type="submit" class="btn btn-danger btn-block" id="borrar" onclick="location.href='/borrado';">Borrarme de la peña</button>
+                </div>
+                   
+            </form>
+
+            
+        </div>
+               
+        </div>
+        <!--Fin del formulario-->
+     
+      
+
+    <!--</div>-->
+    <!--FIN row central-->
+
+    <%- include('partials/footer.ejs') -%>
+ 

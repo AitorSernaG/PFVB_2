@@ -1,0 +1,111 @@
+
+   
+   
+   <%- include('partials/navigation.ejs'); -%>
+
+ <!--INICIO row central-->
+ <div class="row border-0">
+
+    <div class="col d-lg-flex flex-sm-column flex-lg-row central ">
+
+
+        <!--INICIO IZQUIERDA-->
+                <div class="izquierda col col-xs-12 col-lg-8 mt-3 container-fluid ">
+            
+                            <div class="bg-dark p-3 col col-xs-12 rounded text-white">
+                                <h5 class="text-center pt-1 pb-1 ">Fundada en 2010, somos la primera peña del Elche CF creada fuera del termino municipal de Elche </h5>
+                            </div>
+                    
+                            <!--INICIO SLIDER-->
+
+                            <div id="slider" class="carousel col col-xs-12 mt-3 mb-lg-3  slide border-primary" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="/css/img/922591_592028360827909_945233592_o.jpg" class="d-block w-100">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/css/img/945286_588025461228199_940813657_n.jpg" class="d-block w-100">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/css/img/934921_588025571228188_1378323812_n.jpg" class="d-block w-100" >
+                                    </div>
+                                </div>
+                            </div>
+                            <!--FIN SLIDER -->
+
+                    <div class="col-12 d-block d-lg-flex mt-3 ">
+                            <!-- clasificacion-->
+                            <div class="  col col-xs-12 col-xl-6 p-2 bg-dark mr-1 mb-3 text-white rounded text-align-center">
+                                <h6 class="text-black m-y text-center pt-3 pb-2" >Clasificacion Segunda División LaLiga SmartBank</h6>
+                                <script type="text/javascript">widthIcon = "14";heightIcon = "14";</script>
+                                <script language="javascript" src="https://www.siguetuliga.com/widget/clasificacion2.php?id=25" charset="iso-8859-1"></script>
+                            </div>
+                            <!-- fin clasificacion-->
+                            <!--inicio partidos-->
+                            <div class=" col col-xs-12 col-xl-6 bg-dark border-left mb-3 text-white rounded p-2 ">
+                                <h6 class="text-black m-y text-center pt-3 pb-2" >Partidos Segunda División LaLiga SmartBank</h6>
+                                <script type="text/javascript">widthIcon = "14";heightIcon = "14";</script>
+                                <script language="javascript" src="https://www.siguetuliga.com/widget/resultados2.php?id=25" charset="iso-8859-1"></script>
+                            </div>
+                            <!--fin partidos-->
+                    </div>   
+                        
+
+
+            </div>
+            <!--fIN IZQUIERDA-->  
+            
+               
+
+                
+
+                <!--INICIO LADO DERECHO-->
+
+                <div class=" col  col-xs-12 col-lg-4 ">
+                            <!--Inicio jumbotron-->
+                            <div class="jumbotron my-3 ml-md-5 ml-xs-0 p-4 flex-fill onl_socialButtons bg-dark text-white">
+                                <h4 class="text-align-center m-y text-center pt-1 pb-1">NUESTRAS REDES SOCIALES</h4>
+                                <hr>
+
+                                <!--<button type="button" class="btn btn-facebook"><i class="fab fa-facebook-f pr-1"></i> Facebook</button>
+                                <button type="button" class="btn btn-twitter"><i class="fab fa-twitter pr-1"></i> Twitter</button>
+                                <button type="button" class="btn btn-google"><i class="fab fa-youtube pr-1"></i>YouTube</button>-->
+
+                                <a class="btn btn-block btn-social btn-twitter text-white fa-sm pl-5" href="https://twitter.com/pfvegabaja?lang=es" target="blank">
+                                    <i class="fab pl-1 fa-twitter pr-2"></i> Siguenos en Twitter
+                                </a>
+
+                                <a class="btn btn-block btn-social btn-facebook text-white fa-sm pl-5">
+                                    <span class="fab pl-1 fa-facebook pr-1"></span> Siguenos en  Facebook
+                                </a>
+
+                                <a class="btn btn-block btn-social btn-google text-white fa-sm pl-5">
+                                    <span class="fab pl-1 fa-youtube pr-1"></span> Siguenos en  YouTube
+                                </a>
+                                
+                            </div>
+                            <!--Fin jumbotron-->
+
+                            <div class="jumbotron  my-3 ml-md-5 ml-xs-0 p-4 flex-fill  bg-dark text-white">
+                                <h4 class=" m-y  text-center pt-1 pb-1">ULTIMOS TWEETS</h4>
+                                <hr>
+                                <div class="twitter">
+                                <a class="twitter-timeline " data-tweet-limit="4" href="https://twitter.com/PFVegaBaja?ref_src=twsrc%5Etfw">Tweets by PFVegaBaja</a> 
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                </div>  
+                                
+                            </div>
+               
+                
+                </div>
+                 <!--FIN LADO DERECHO-->
+    </div>
+ 
+  
+
+</div>
+<!--FIN row central-->
+
+    <%- include('partials/footer.ejs') -%>
+
+
