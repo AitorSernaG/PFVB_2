@@ -48,10 +48,10 @@ server.use(middleaware());
 // routing
 server.use(routes());
 
-server.set('port', (process.env.PORT || 3000));
+const host = process.env.HOST || '0.0.0.0';
+const port = process.env.PORT || 3000;
 
 // servidor
-server.listen(3000, () => {
+server.listen(port, host, () => {
     console.log("Servidor levantado");
-    console.log('NOMBRE DEL SERVIDOR: ', server.get('port'));
 })
