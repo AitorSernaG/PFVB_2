@@ -43,10 +43,13 @@ body{
 
 
 .barra1 {
-    text-shadow: 4px 8px 8px black;
+    text-shadow: 6px 12px 10px black;
     
 }
 
+.arriba, .abajo, .fondo{
+    opacity:0.9;
+}
 
 
 .navbar-dark .navbar-nav .nav-link {
