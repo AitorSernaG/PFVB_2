@@ -10,7 +10,7 @@ const bodyParser = require('body-parser');
 
 // conectar a mongoDB con nuestra base de datos
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/penya', {
+mongoose.connect('mongodb://localhost/penya', { // esta linea habria que cambiarla en caso de subirla a produccion en una pagina mlab
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false

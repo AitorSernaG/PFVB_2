@@ -3,7 +3,7 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const ControladorTexto = require('../controllers/ControladorTexto');
-const penyistaControlador = require('../controllers/penyistaController');
+const PenyistaControlador = require('../controllers/penyistaController');
 
 
 let c = 0;
@@ -37,7 +37,7 @@ module.exports = function () {
     });
 
     // agregamos un nuevo peñista con los datos del formulario a la base de datos
-    router.post('/contacto', penyistaControlador.nuevoPenyista);
+    router.post('/contacto', PenyistaControlador.nuevoPenyista);
     
     router.post('/contacto_datos', ControladorTexto.TextoControlado);
 

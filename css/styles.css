@@ -41,45 +41,31 @@ body{
     border: 1px solid black;
 }
 
-.logo img{
+
+.barra1 {
+    text-shadow: 4px 8px 8px black;
     
-    width: 100px;
-    height: 100px;
 }
 
-.barra{
-    
-    font-size: 22px;
-}
 
-.barra ul{
-    
-    margin-top: 20px;
-}
 
-.barra ul li{
-    
-    display: inline-block ;
-    padding: 0px 40px 0px 40px;
-    letter-spacing: 1px;
-    line-height: 50px;
-    transition: all 200ms;
-    border-radius: 3px;
-
-}
-
-.barra ul li a{
-    display: block;
+.navbar-dark .navbar-nav .nav-link {
+    font-size: 25px;
     color: #17a2b8;
     text-decoration: none;
     transition: all 200ms;
 }
+    
 
 
-.barra > ul > li > a:hover{
+
+.navbar-dark .navbar-nav .nav-link:hover{
     color: rgb(32, 170, 32);
     transform: scale(1.2, 1.2);
+    text-shadow: 4px 8px 8px black;
 }
+
+
 
 /*central*/
 
@@ -142,11 +128,32 @@ body{
 
 /*responsive*/
 
-@media (min-width: 576px) { 
-    .footer2{
+@media (min-width: 376px) { 
+    .footer2 {
         font-size: 15px;
     }
+
+    .barra ul li a{
+        font-size: 18px;
+    }
+
+    .navbar-dark .navbar-nav .nav-link{
+        font-size: 28px;
+        
+       
+        
+    }
+
+    .barra1{
+        font-size: 28px ;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    
  }
+
+
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
@@ -157,6 +164,15 @@ body{
     .footer2{
         font-size: 20px;
     }
+
+    .navbar-dark .navbar-nav .nav-link{
+        font-size: 20px;
+    }
+
+    .barra1{
+        font-size: 28px ;
+    }
+    
  }
 
 /* Large devices (desktops, 992px and up)*/
@@ -168,6 +184,21 @@ body{
     .footer2{
         font-size: 15px;
     }
+
+    
+
+    .navbar-dark .navbar-nav .nav-link{
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .barra1{
+        font-size: 2.0rem;
+    }
+
+   
+    
+    
  }
 
 /* Extra large devices (large desktops, 1200px and up)*/
@@ -177,6 +208,20 @@ body{
 
     
  }
+
+ .navbar-dark .navbar-nav{
+    margin-left: -40px;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    font-size: 25px;
+
+}
+
+.barra1{
+    font-size: 2.5rem;
+}
+
 
  .footer1{
     font-size: 30px;
