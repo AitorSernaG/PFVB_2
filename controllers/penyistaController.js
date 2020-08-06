@@ -17,7 +17,7 @@ exports.nuevoPenyista = async (req, res, next) => {
                 res.redirect('/registrado');
             },4000)
         }else{
-            res.json('No se ha podido registrar el usuario')
+            res.json('No se ha podido registrar el usuario');
         }
     } catch (error) {
         console.log(error);

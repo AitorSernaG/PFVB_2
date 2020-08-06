@@ -7,22 +7,29 @@ $(document).ready(function() {
         $("#mensajeEnviado").fadeIn();
     })
 
-    $("input").change(function(){
+    $("input").keyup(function(){
         let contador; 
-        if($("#nombre").val() === "" || $("#apellidos").val() === "" || $("#poblacion").val() === "" || $("#email").val() === "" || $("#telefono").val() === ""){
+        if($("#nombre").val().length < 1 || $("#apellidos").val().length < 1 || $("#poblacion").val().length < 1 || $("#email").val().length < 1 || $("#telefono").val().length < 9 || $("#telefono").val().length > 9){
             contador = 1;
         }else{
             contador = 0;
         }
 
-        if(contador == 0){
-            $("#enviar").attr("disabled", false);
-        }else{
+        if(contador == 1){
             $("#enviar").attr("disabled", true);
-        }         
+        }else{
+            $("#enviar").attr("disabled", false);
+        }      
+        
+        
     })
 
 });
+
+
+
+
+
 
 /// PONER UN BOTON ACTIVO SI ESTAS EN ESA PAGINA
     const url = window.location.href;
