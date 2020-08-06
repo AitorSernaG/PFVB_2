@@ -108,9 +108,12 @@ body{
 
 #slider{
     width: 100%;
-    max-height: 780px;
+    max-height: 640px;
     overflow: hidden;
+}
 
+#slider img{
+    max-height: 640px;
 }
 
 /*pagination
