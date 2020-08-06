@@ -48,8 +48,12 @@ body{
     
 }
 
-.arriba, .abajo, .fondo{
+.arriba, .fondo{
     opacity:0.8;
+}
+
+.abajo{
+    opacity: 0.9;
 }
 
 
@@ -156,26 +160,35 @@ hr {
 /*responsive//////////////////////////////////////////////////////////////////*/
 
 @media (min-width: 200px) { 
-    .footer2 {
-        font-size: 15px;
+    
+
+    .barra1{
+        font-size: 40px ;
+        text-align: center;
+        margin-top: 10px;
     }
+
+    .derechos{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .paginas{
+        padding-left: 38px;
+    }
+
+    
 
     .barra ul li a{
         font-size: 18px;
     }
 
     .navbar-dark .navbar-nav .nav-link{
-        font-size: 28px;
-        
-       
+        font-size: 28px; 
         
     }
 
-    .barra1{
-        font-size: 28px ;
-        text-align: center;
-        margin-top: 10px;
-    }
+   
 
     #slider img{
         max-height: 200px;
@@ -192,13 +205,22 @@ hr {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-    .footer1{
-        font-size: 30px;
-    }
     
-    .footer2{
-        font-size: 20px;
+    .barra1{
+        font-size: 40px ;
+        text-align: center;
+        margin-top: 10px;
     }
+
+    .derechos{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .paginas{
+        padding-left: 190px;
+    }
+
 
     .navbar-dark .navbar-nav .nav-link{
         font-size: 20px;
@@ -222,13 +244,22 @@ hr {
      
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) { 
-    .footer1{
-        font-size: 22px;
+   
+    .barra1{
+        font-size: 40px ;
+        text-align: center;
+        margin-top: 10px;
     }
-    
-    .footer2{
-        font-size: 15px;
+
+    .derechos{
+        font-size: 20px;
+        text-align: center;
     }
+
+    .paginas{
+        padding-left: 290px;
+    }
+
 
     
 
@@ -278,14 +309,22 @@ hr {
 }
 
 
- .footer1{
-    font-size: 30px;
+.barra1{
+    font-size: 40px ;
+    text-align: center;
+    margin-top: 10px;
 }
 
-.footer2{
-    font-size: 17px;
-    margin-left: 40px;
+.derechos{
+    font-size: 22px;
+    text-align: center;
 }
+
+.paginas{
+    padding-top: 10px;
+    padding-left: 190px;
+}
+
 
 }
 
