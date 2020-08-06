@@ -42,6 +42,24 @@ $(document).ready(function() {
 
 ////////////////////////////////////////////////
 
+// animacion del slider
+
+//Pequeño script para el slider, no es necesario para que funcione pero podemos tunear muchas cosas-->
+
+    $(document).ready(function(){
+        
+        $(".carousel").carousel({ /*para que funcione el slider con el intervalo que queremos*/
+            interval: 4000
+        });
+
+        $('[data-toggle="tooltip"]').tooltip(); /*esto es para que funcionen los tooltips*/
+
+        $('[data-toggle="popover"]').popover(); /*esto es para que funcionen los popovers*/
+
+    });
+
+    //////////////////////////////////////////////////////////////////////////////////
+
 
 
 
