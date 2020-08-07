@@ -16,7 +16,8 @@ const penyistaSchema = new Schema({
     },
     email: {
         type: String,
-        trim: true
+        trim: true,
+        unique: true
     },
     telefono: {
         type: String,

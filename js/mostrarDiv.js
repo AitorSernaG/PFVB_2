@@ -1,11 +1,16 @@
 
 
+
+
 $(document).ready(function() {
     
     $("#formulario").submit(function(){
+
+        $("#mensajeEnviado").fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(2000).fadeOut(2000);
         
-        $("#mensajeEnviado").fadeIn();
     })
+
+
 
     $("input").keyup(function(){
         let contador; 

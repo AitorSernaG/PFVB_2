@@ -24,9 +24,13 @@ module.exports = function () {
         res.render('../views/nosotros.ejs');
     });
 
+   
+
     router.get('/contacto', (req,res,next) => {
         res.render('../views/contacto.ejs');
     });
+
+    
 
     router.get('/registrado', (req,res,next) => {
         res.render('../views/registrado.ejs');
@@ -35,6 +39,11 @@ module.exports = function () {
     router.get('/borrado', (req,res,next) => {
         res.render('../views/borrado.ejs');
     });
+
+    router.get('/error', (req,res,next) => {
+        res.render('../views/error.ejs');
+    });
+   
 
     // agregamos un nuevo peñista con los datos del formulario a la base de datos
     router.post('/contacto', PenyistaControlador.nuevoPenyista);

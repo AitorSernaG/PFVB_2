@@ -23,12 +23,6 @@ module.exports = function(){
         }
 
     });
-
-   
-
-
-
-
     return server
     
 }

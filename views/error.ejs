@@ -1,0 +1,30 @@
+
+    <%- include('partials/navigation.ejs'); -%>
+
+    <!--INICIO row central-->
+    <div class="row centralregistro border-0">
+
+       
+    <!--contenido del formulario-->
+    <div class="col col-xs-12 col-md-10 col-xl-8  m-5 mx-auto border border-secondary bg-dark ">
+        
+        <div class=" alert alert-danger mt-5">
+           
+              <h1 class="display-4 text-center aviso-title">Error de registro</h1>
+              <hr>
+              <p class="lead text-center aviso-text">No hemos podido registrarte en la base de datos ya que tenemos un usuario con ese mismo nombre</p>
+              <p class="text-center">MUCHO ELCHE !!!</p>
+        </div>
+        <button class="btn btn-info btn-block my-5 text" onclick="location.href='/contacto';">Volver al formulario</button>
+       
+ 
+    </div>
+    <!--Fin del formulario-->
+ 
+    
+     
+
+   </div>
+   <!--FIN row central-->
+   
+   <%- include('partials/footer.ejs') -%>
