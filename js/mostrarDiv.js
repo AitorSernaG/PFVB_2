@@ -56,7 +56,7 @@ $(document).ready(function() {
     $(document).ready(function(){
         
         $(".carousel").carousel({ /*para que funcione el slider con el intervalo que queremos*/
-            interval: 3000
+            interval: 4000
         });
 
         $('[data-toggle="tooltip"]').tooltip(); /*esto es para que funcionen los tooltips*/
