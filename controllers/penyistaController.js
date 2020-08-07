@@ -7,22 +7,24 @@ const express = require('express');
 exports.nuevoPenyista = async (req, res, next) => {
     
     const penyista = new Penyista(req.body);
-
+    
     try {
-
         usu = await penyista.save();
         
         if(usu){
             console.log('peñista guardado');
             setTimeout(function(){
-               res.redirect('/registrado');
-            },8000)   
+                res.redirect('/registrado');
+            },8000)
+        }else{
+            res.json('No se ha podido registrar el usuario')
         }
     } catch (error) {
-        console.log('No se ha podido registrar el usuario');
-            setTimeout(function(){
-               res.redirect('/Error');
-            },8000)
+        console.log(error);
+        setTimeout(function(){
+            res.redirect('/error');
+        },8000)
+        
     }
 }
 
