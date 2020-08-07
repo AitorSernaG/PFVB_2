@@ -159,9 +159,10 @@ hr {
 
 /*responsive//////////////////////////////////////////////////////////////////*/
 
+
 @media (min-width: 200px) { 
     
-
+    
     .barra1{
         font-size: 40px ;
         text-align: center;
@@ -199,6 +200,48 @@ hr {
         margin-top: 20px;
     }
 
+    .text-videos{
+        font-size: 13px;
+    }
+
+    /* textos pagina principal*/
+    h4{
+        font-size: 15px;
+    }
+
+    .social{
+        font-size: 18px;
+    }
+
+    h6{
+        font-size: 12px;
+    }
+
+    /*textos formulario*/
+    .titulo-form{
+        font-size: 20px;
+    }
+
+    .subtitulo-form{
+        font-size: 12px;
+    }
+
+    .borrar-text{
+        font-size: 13px;
+    }
+
+    .correcto-text{
+        font-size: 20px;
+    }
+
+    /*textos avisos*/
+    .aviso-title{
+        font-size: 25px;
+    }
+
+    .aviso-text{
+        font-size: 18px;
+    }
     
  }
 
@@ -236,6 +279,48 @@ hr {
     }
 
 
+    .text-videos{
+        font-size: 16px;
+    }
+
+
+    h4{
+        font-size: 15px;
+    }
+
+    .social{
+        font-size: 20px;
+    }
+
+    h6{
+        font-size: 15px;
+    }
+
+    /*textos formulario*/
+    .titulo-form{
+        font-size: 25px;
+    }
+
+    .subtitulo-form{
+        font-size: 15px;
+    }
+
+    .borrar-text{
+        font-size: 16px;
+    }
+
+    .correcto-text{
+        font-size: 22px;
+    }
+
+    /*textos avisos*/
+    .aviso-title{
+        font-size: 30px;
+    }
+
+    .aviso-text{
+        font-size: 22px;
+    }
 
     
  }
@@ -277,8 +362,49 @@ hr {
         
     }
 
+    .text-videos{
+        font-size: 20px;
+    }
+
+    h4{
+        font-size: 20px;
+    }
+
+    .social{
+        font-size: 23px;
+    }
+
+    h6{
+        font-size: 18px;
+    }
+
    
-    
+    /*textos formulario*/
+    .titulo-form{
+        font-size: 33px;
+    }
+
+    .subtitulo-form{
+        font-size: 19px;
+    }
+
+    .borrar-text{
+        font-size: 18px;
+    }
+
+    .correcto-text{
+        font-size: 24px;
+    }
+
+       /*textos avisos*/
+       .aviso-title{
+        font-size: 50px;
+    }
+
+    .aviso-text{
+        font-size: 24px;
+    }
+
     
  }
 

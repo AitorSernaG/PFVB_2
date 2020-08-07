@@ -11,8 +11,9 @@
             <form class="form-horizontal text-white mt-5 content-center" id="formulario" method="post" action="/contacto" >
                 
                 <div class="form-group col-xs-12 col-sm-12 col-xl-12 mx-auto">
-                    <h1 class="text-center mb-2">Formulario de registro en la peña</h1>
-                    <h5 class="text-center mb-5">Introduce tus datos en el siguiente formulario y pasarás a formar parte de nuestra base de datos</h5>
+                    <h1 class="text-center mb-2 titulo-form">Formulario de registro en la peña</h1>
+                    <hr>
+                    <h5 class="text-center mb-5 subtitulo-form">Pasarás a formar parte de nuestra base de datos</h5>
                 </div>
 
                 <div class="form-group col-xs-12 col-sm-10 col-xl-8 mx-auto">
@@ -40,10 +41,10 @@
                 </div>
 
                 <div class="alert alert-success col-xs-12 col-sm-10 col-xl-8 mx-auto text-center " id="mensajeEnviado">
-                    <h3>Datos guardados correctamente</h3>
+                    <h3 class="correcto-text">Datos guardados correctamente</h3>
                 </div>
 
-                <h5 class="text-center mt-4">Si quieres borrarte de nuestra peña click en el boton rojo</h5>
+                <h5 class="text-center mt-4 borrar-text">Si quieres borrarte de nuestra peña click en el boton rojo</h5>
                 <div class="form-group col-xs-12 col-sm-10 col-xl-8 mx-auto">
                     <button type="submit" class="btn btn-danger btn-block" id="borrar" onclick="location.href='/borrado';">Borrarme de la peña</button>
                 </div>
