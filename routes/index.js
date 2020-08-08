@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const ControladorTexto = require('../controllers/ControladorTexto');
 const PenyistaControlador = require('../controllers/penyistaController');
+const Penyista = require('../models/Penyista');
 
 
 let c = 0;
@@ -24,13 +25,17 @@ module.exports = function () {
         res.render('../views/nosotros.ejs');
     });
 
-   
-
-    router.get('/contacto', (req,res,next) => {
+    router.get('/contacto', async (req,res,next) => { 
         res.render('../views/contacto.ejs');
     });
 
-    
+    router.get('/listado', async (req,res,next) => {
+        const penyistas = await Penyista.find({}); // preparado para traer todos los registros de la base de datos con el modelo
+        console.log(penyistas);
+        res.render('../views/listado.ejs', {
+            penyistas // esta variable se puede usar en la pagina para mostrar datos del bd
+        });
+    });
 
     router.get('/registrado', (req,res,next) => {
         res.render('../views/registrado.ejs');
