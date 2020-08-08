@@ -22,7 +22,16 @@ const penyistaSchema = new Schema({
     telefono: {
         type: String,
         trim: true
+    },
+    abonado: {
+        type: String,
+        trim: true
+    },
+    abono: {
+        type: String,
+        trim: true
     }
+
 });
 
 module.exports = mongoose.model('Penyista', penyistaSchema);

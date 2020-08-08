@@ -1,6 +1,6 @@
 
 
-
+// validacion del formulario
 
 $(document).ready(function() {
     
@@ -11,22 +11,50 @@ $(document).ready(function() {
     })
 
 
-
     $("input").keyup(function(){
         let contador; 
-        if($("#nombre").val().length < 1 || $("#apellidos").val().length < 1 || $("#poblacion").val().length < 1 || $("#email").val().length < 1 || $("#telefono").val().length < 9 || $("#telefono").val().length > 9){
+
+        if($("#nombre").val().length < 1 || $("#apellidos").val().length < 1 || $("#poblacion").val().length < 1 || $("#email").val().length < 1 
+        || $("#telefono").val().length < 9 || $("#telefono").val().length > 9){
             contador = 1;
         }else{
             contador = 0;
         }
 
+
         if(contador == 1){
             $("#enviar").attr("disabled", true);
+        }else if(contador == 0){
+
+            $('#opcion').change(function(){
+
+                if($('#opcion').val() == 'no'){
+                    $("#enviar").attr("disabled", false);
+                }else if($('#opcion').val() == 'si'){
+
+                    $("#enviar").attr("disabled", true);
+
+                    $('#abono').keyup(function(){
+                        if($("#abono").val().length > 0){
+                            $("#enviar").attr("disabled", false);
+                        }else{
+                            $("#enviar").attr("disabled", true);
+                        }
+                    }) 
+                }
+            })
+            
+        } 
+        
+    })
+
+    $("select").change(function(){
+
+        if($('#opcion').val() == 'si'){
+            $('#abono').fadeIn(500);
         }else{
-            $("#enviar").attr("disabled", false);
-        }      
-        
-        
+            $('#abono').fadeOut(500);
+        }
     })
 
 });
