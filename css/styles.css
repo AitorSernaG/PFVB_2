@@ -238,6 +238,7 @@ hr {
     .navbar-dark .navbar-nav .nav-link:hover{
         color: rgb(32, 170, 32);
         transform: none;
+        text-shadow: 0px 0px 0px black;
     }
 
    
@@ -320,6 +321,7 @@ hr {
     .navbar-dark .navbar-nav .nav-link{
         font-size: 20px;
         transform: none;
+        text-shadow: 0px 0px 0px black;
     }
 
     .barra1{
