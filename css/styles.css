@@ -200,7 +200,7 @@ hr {
     }
 
     .derechos{
-        font-size: 12px;
+        font-size: 20px;
         text-align: center;
     }
 
@@ -518,7 +518,7 @@ hr {
 }
 
 .derechos{
-    font-size: 15px;
+    font-size: 22px;
     text-align: center;
 }
 
@@ -531,12 +531,6 @@ hr {
 }
 
 
-@media (min-width: 1700px){
-    .derechos{
-        font-size: 22px;
-        text-align: center;
-    }
-}
 
 
 
