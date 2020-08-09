@@ -237,14 +237,13 @@ hr {
 
     .navbar-dark .navbar-nav .nav-link:hover{
         color: rgb(32, 170, 32);
-        transform: none;
-        text-shadow: 0px 0px 0px black;
+    
     }
 
     .menu_activo {
         color: chartreuse !important;
-        transform: none !important;
-        text-shadow: 0px 0px 02px black !important;
+        transform: none;
+        text-shadow: 0px 0px 0px black;
     }
 
    
@@ -326,14 +325,13 @@ hr {
 
     .navbar-dark .navbar-nav .nav-link{
         font-size: 20px;
-        transform: none;
-        text-shadow: 0px 0px 0px black;
+        
     }
 
     .menu_activo {
         color: chartreuse !important;
-        transform: none !important;
-        text-shadow: 0px 0px 0px black !important;
+        transform: none ;
+        text-shadow: 0px 0px 0px black;
     }
 
     .barra1{
