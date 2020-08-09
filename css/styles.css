@@ -241,6 +241,12 @@ hr {
         text-shadow: 0px 0px 0px black;
     }
 
+    .menu_activo {
+        color: chartreuse !important;
+        transform: none;
+        text-shadow: 4px 8px 12px black !important;
+    }
+
    
 
     #slider img{
@@ -322,6 +328,12 @@ hr {
         font-size: 20px;
         transform: none;
         text-shadow: 0px 0px 0px black;
+    }
+
+    .menu_activo {
+        color: chartreuse !important;
+        transform: none;
+        text-shadow: 4px 8px 12px black !important;
     }
 
     .barra1{
