@@ -187,7 +187,11 @@ hr {
 
 
 @media (min-width: 200px) { 
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 100%;
+
     
+ }
     
     .barra1{
         font-size: 40px ;
@@ -384,6 +388,11 @@ hr {
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) { 
    
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 100%;
+
+    
+ }
     .barra1{
         font-size: 40px ;
         text-align: center;
@@ -421,7 +430,7 @@ hr {
     }
 
     .barra1{
-        font-size: 2.0rem;
+        font-size: 1.8rem;
     }
 
     #slider img{
@@ -476,7 +485,7 @@ hr {
  }
 
 /* Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) { 
+@media (min-width: 1300px) { 
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 100%;
 
@@ -493,7 +502,7 @@ hr {
 }
 
 .barra1{
-    font-size: 2.5rem;
+    font-size: 2.3rem;
 }
 
 #slider img{
@@ -509,7 +518,7 @@ hr {
 }
 
 .derechos{
-    font-size: 22px;
+    font-size: 15px;
     text-align: center;
 }
 
@@ -521,6 +530,13 @@ hr {
 
 }
 
+
+@media (min-width: 1700px){
+    .derechos{
+        font-size: 22px;
+        text-align: center;
+    }
+}
 
 
 
