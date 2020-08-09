@@ -238,7 +238,7 @@ hr {
     .menu_activo {
         color: chartreuse !important;
         transform: none ;
-        text-shadow: 0px 0px 0px black;
+        text-shadow: 4px 8px 12px black;
     }
 
    
@@ -326,7 +326,7 @@ hr {
     .menu_activo {
         color: chartreuse !important;
         transform: none ;
-        text-shadow: 0px 0px 0px black;
+        text-shadow: 4px 8px 12px black;
     }
 
     .barra1{
