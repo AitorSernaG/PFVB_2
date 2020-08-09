@@ -187,11 +187,7 @@ hr {
 
 
 @media (min-width: 200px) { 
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
-        max-width: 100%;
 
-    
- }
     
     .barra1{
         font-size: 40px ;
