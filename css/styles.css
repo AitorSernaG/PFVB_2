@@ -50,23 +50,6 @@ body{
 
 
 
-
-/*
-.cabecera{
-    width: 100%;
-    background: darkseagreen;
-    height: 150px;
-}
-
-.cabecera h1{
-    width: 600px;
-    padding-top: 20px;
-    margin-left: 400px;
-    text-align: center;
-    font-size: 36px;   
-    text-shadow: 2px 2px 2px  darkgreen;
-    color:  rgb(6, 39, 6);
-}*/
 .cabecera{
     width: 100%;
 }
@@ -82,7 +65,7 @@ body{
 }
 
 .arriba, .fondo{
-    opacity:0.8;
+    opacity:0.9;
 }
 
 .abajo{
@@ -105,7 +88,13 @@ body{
 
 .central{
     min-height: 1000px;
-    /*background: url(img/cesped.jpg);*/
+    /*background: url(img/cesped.jpg);*/  
+}
+
+.sombra-caja{
+   
+    box-shadow: 15px 0px 15px black, -15px 0px 15px black;
+    
 }
 
 .centralregistro{
