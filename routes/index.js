@@ -29,13 +29,6 @@ module.exports = function () {
         res.render('../views/contacto.ejs');
     });
 
-    router.get('/listado', async (req,res,next) => {
-        const penyistas = await Penyista.find({}); // preparado para traer todos los registros de la base de datos con el modelo
-        console.log(penyistas);
-        res.render('../views/listado.ejs', {
-            penyistas // esta variable se puede usar en la pagina para mostrar datos del bd
-        });
-    });
 
     router.get('/registrado', (req,res,next) => {
         res.render('../views/registrado.ejs');
@@ -49,8 +42,10 @@ module.exports = function () {
         res.render('../views/error.ejs');
     });
    
+    // para ver un listado con los abonados
+    router.get('/listado', PenyistaControlador.listadoPenyistas);
 
-    // agregamos un nuevo peñista con los datos del formulario a la base de datos
+    // agregamos un nuevo peñista con los datos del formulario a la base de datos, solo en caso de que el mail no coincida
     router.post('/contacto', PenyistaControlador.nuevoPenyista);
     
     router.post('/contacto_datos', ControladorTexto.TextoControlado);
