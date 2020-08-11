@@ -168,7 +168,17 @@ hr {
 }
 
 
+.jumbotron .cartaImagen{
+    width: 75%;
+    margin: auto;
+    display: block;
+}
 
+.jumbotron .cartaImagen2{
+    width: 18%;
+    margin: auto;
+    display: block;
+}
 
 #imagen{
     width: 187px;
