@@ -7,7 +7,6 @@ const PenyistaControlador = require('../controllers/penyistaController');
 const Penyista = require('../models/Penyista');
 
 
-let c = 0;
 
 
 module.exports = function () {
@@ -29,6 +28,9 @@ module.exports = function () {
         res.render('../views/contacto.ejs');
     });
 
+    // agregamos un nuevo peñista con los datos del formulario a la base de datos, solo en caso de que el mail no coincida
+    router.post('/contacto', PenyistaControlador.nuevoPenyista);
+
 
     router.get('/registrado', (req,res,next) => {
         res.render('../views/registrado.ejs');
@@ -45,8 +47,7 @@ module.exports = function () {
     // para ver un listado con los abonados
     router.get('/listado', PenyistaControlador.listadoPenyistas);
 
-    // agregamos un nuevo peñista con los datos del formulario a la base de datos, solo en caso de que el mail no coincida
-    router.post('/contacto', PenyistaControlador.nuevoPenyista);
+    
     
     router.post('/contacto_datos', ControladorTexto.TextoControlado);
 

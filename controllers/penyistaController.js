@@ -1,5 +1,7 @@
 const Penyista = require('../models/Penyista'); // traemos el modelo penyista para hacer las consultas
 const express = require('express');
+const { connection } = require('mongoose');
+
 
 
 // agregar nuevo peñista a la base de datos
@@ -11,25 +13,36 @@ exports.nuevoPenyista = async (req, res, next) => {
         const penyistaEmail = await Penyista.find({"email": req.body.email}) // datos traidos de la base de datos con el modelo
         //console.log(penyistas);
         console.log(req.body.email);
+        
     
     try {
 
         if(req.body.email !== penyistaEmail){
             usu = await penyista.save();
             console.log('peñista guardado');
+            const respuesta = await {nombre: req.body.nombre};
+            
             setTimeout(function(){
-                res.redirect('/registrado');
-            },8000)
-        }  
-    } catch (error) {
+                res.render('../views/registrado.ejs', {
+                respuesta
+            });
+            },8000);   
+        } 
+    }catch (error) {
+        
         console.log(error);
         console.log("Ya existe un peñista con ese email");
-        setTimeout(function(){
-            res.redirect('/error');
-        },8000)
+        const respuesta = await {respuesta: "lo sentimos el usuario ya existe con ese email: ", email: req.body.email };
         
+        setTimeout(function(){
+            res.render('../views/error.ejs', {
+            respuesta
+        });
+        },8000);
     }
-}
+    }
+
+
 
 
 exports.listadoPenyistas = async (req, res, next) => {
