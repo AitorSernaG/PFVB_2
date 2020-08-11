@@ -17,7 +17,7 @@ body{
 }
 
 .boton-menu{
-    color: chartreuse;
+    color: #17a2b8;
 }
 
 .titulo{
@@ -60,8 +60,11 @@ body{
 
 
 .barra1 {
+    text-shadow: 6px 12px 10px black;  
+}
+
+.primero{
     text-shadow: 6px 12px 10px black;
-    
 }
 
 .arriba, .fondo{
@@ -305,6 +308,15 @@ hr {
         font-size: 40px ;
         text-align: center;
         margin-top: 10px;
+    }
+
+    .titulo2{
+        font-size: 23px ;
+        margin: auto;
+        text-align: center;
+        color: chartreuse;
+        transform: none ;
+        text-shadow: 4px 8px 12px black;
     }
 
     .derechos{
