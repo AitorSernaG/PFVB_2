@@ -8,8 +8,13 @@ $(document).ready(function() {
     
 
     $("#formulario").submit(function(e){
-            console.log(e)
-            $("#cargando").fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(2000).fadeOut(2000);
+
+            console.log(e);
+            $("#cargando").fadeIn(2000);
+            
+            setTimeout(function(){
+                $("#cargando").fadeOut(1000);
+            },7000)
     })
 
 
