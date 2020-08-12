@@ -154,6 +154,23 @@ hr {
     clear: both;
     }
 
+.info {
+        border: 0 none #000000;
+        border-top: 1px solid #17a2b8;
+        height: 2px;
+        margin: 5px 5px;
+        display: block;
+        clear: both;
+        }
+
+    .linkedinIcon{
+        color: #17a2b8;
+    }
+
+    .linkedinIcon:hover{
+        color: chartreuse;
+    }
+
 .twitter{
     max-height: 810px;
     overflow: auto;
@@ -183,6 +200,12 @@ hr {
 #imagen{
     width: 187px;
     height: 275px;
+}
+
+
+
+.arriba-boton:hover{
+    color: #343a40;
 }
 
 /*SPINNER*/
@@ -347,6 +370,10 @@ hr {
         text-align: center;
     }
 
+    .arriba-boton{
+        font-size: 20px
+    }
+
     .paginas{
         text-align: center;
     }
@@ -453,7 +480,10 @@ hr {
     .paginas{
       
         text-align: center;
+        
     }
+
+  
 
 
     .navbar-dark .navbar-nav .nav-link{
