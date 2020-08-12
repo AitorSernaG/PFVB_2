@@ -59,7 +59,7 @@ body{
 }
 
 
-.barra1 {
+.barra1,.barra2 {
     text-shadow: 6px 12px 10px black;  
 }
 
@@ -315,13 +315,26 @@ hr {
 
     
     .barra1{
-        font-size: 40px ;
+        
         text-align: center;
         margin-top: 10px;
     }
 
+    .barra1{
+        font-size: 40px;
+    }
+
+    .barra2{
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .barra2 h3{
+        font-size: 25px ; 
+    }
+
     .titulo2{
-        font-size: 23px ;
+        font-size: 25px ;
         margin: auto;
         text-align: center;
         color: chartreuse;
@@ -428,6 +441,10 @@ hr {
         margin-top: 10px;
     }
 
+    .barra2 h3{
+        font-size: 30px ; 
+    }
+
     .derechos{
         font-size: 20px;
         text-align: center;
@@ -527,6 +544,10 @@ hr {
         font-size: 38px ;
         text-align: center;
         margin-top: 10px;
+    }
+
+    .barra2 h3{
+        font-size: 30px ; 
     }
 
     .derechos{
@@ -640,6 +661,10 @@ hr {
     font-size: 40px ;
     text-align: center;
     margin-top: 10px;
+}
+
+.barra2 h3{
+    font-size: 35px ; 
 }
 
 .derechos{
