@@ -71,7 +71,7 @@ function enableBtn(){
 
     setTimeout(function(){
         document.getElementById("enviar").disabled = true;
-    },59000)
+    },59600)
 }
 
 /// PONER UN BOTON ACTIVO SI ESTAS EN ESA PAGINA
