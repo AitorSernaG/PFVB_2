@@ -6,6 +6,7 @@
 $(document).ready(function() {
     
     const respuesta = grecaptcha.getResponse();
+    console.log(respuesta);
 
     $("#formulario").submit(function(e){
 
@@ -30,7 +31,7 @@ $(document).ready(function() {
             contador = 0;
         }
 
-       if(respuesta.length > 0){
+       
             if(contador == 1){
                 $("#enviar").attr("disabled", true);
             }else if(contador == 0){
@@ -54,7 +55,7 @@ $(document).ready(function() {
                 })
                 
             } 
-       }
+       
        
         
     })
