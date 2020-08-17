@@ -5,11 +5,11 @@
 
 $(document).ready(function() {
     
-    
+    const respuesta = grecaptcha.getResponse();
 
     $("#formulario").submit(function(e){
 
-
+        
 
             console.log(e);
             $("#cargando").fadeIn(2000);
@@ -22,7 +22,6 @@ $(document).ready(function() {
 
     $("input").keyup(function(){
         let contador; 
-        const response = grecaptcha.getResponse();
 
         if($("#nombre").val().length < 1 || $("#apellidos").val().length < 1 || $("#poblacion").val().length < 1 || $("#email").val().length < 1 
         || $("#telefono").val().length < 9 || $("#telefono").val().length > 9){
@@ -31,30 +30,32 @@ $(document).ready(function() {
             contador = 0;
         }
 
+       if(respuesta.length > 0){
+            if(contador == 1){
+                $("#enviar").attr("disabled", true);
+            }else if(contador == 0){
 
-        if(contador == 1){
-            $("#enviar").attr("disabled", true);
-        }else if(contador == 0){
+                $('#opcion').change(function(){
 
-            $('#opcion').change(function(){
+                    if($('#opcion').val() == 'no'){
+                        $("#enviar").attr("disabled", false);
+                    }else if($('#opcion').val() == 'si'){
 
-                if($('#opcion').val() == 'no' && response.length !== 0){
-                    $("#enviar").attr("disabled", false);
-                }else if($('#opcion').val() == 'si'){
+                        $("#enviar").attr("disabled", true);
 
-                    $("#enviar").attr("disabled", true);
-
-                    $('#abono').keyup(function(){
-                        if($("#abono").val().length > 0 && response.length !== 0){
-                            $("#enviar").attr("disabled", false);
-                        }else{
-                            $("#enviar").attr("disabled", true);
-                        }
-                    }) 
-                }
-            })
-            
-        } 
+                        $('#abono').keyup(function(){
+                            if($("#abono").val().length > 0){
+                                $("#enviar").attr("disabled", false);
+                            }else{
+                                $("#enviar").attr("disabled", true);
+                            }
+                        }) 
+                    }
+                })
+                
+            } 
+       }
+       
         
     })
 
@@ -70,7 +71,9 @@ $(document).ready(function() {
 });
 
 
-
+function recaptchaCallback() {
+    $('#submitBtn').removeAttr('disabled');
+};
 
 /// PONER UN BOTON ACTIVO SI ESTAS EN ESA PAGINA
     const url = window.location.href;
