@@ -36,18 +36,14 @@ $(document).ready(function() {
                 $('#opcion').change(function(){
 
                     if($('#opcion').val() == 'no' ){
-                        function enableBtn(){
-                            document.getElementById("enviar").disabled = false;
-                        }
+                        $("#enviar").attr("disabled", false);
                     }else if($('#opcion').val() == 'si'){
 
                         $("#enviar").attr("disabled", true);
 
                         $('#abono').keyup(function(){
                             if($("#abono").val().length > 0){
-                                function enableBtn(){
-                                    document.getElementById("enviar").disabled = false;
-                                }
+                                $("#enviar").attr("disabled", false);
                             }else{
                                 $("#enviar").attr("disabled", true);
                             }
@@ -56,11 +52,7 @@ $(document).ready(function() {
                 })
                 
             } 
-       
            
-       
-       
-        
     })
 
     $("select").change(function(){
@@ -75,7 +67,9 @@ $(document).ready(function() {
 });
 
 
-
+function enableBtn(){
+    document.getElementById("enviar").disabled = false;
+}
 
 /// PONER UN BOTON ACTIVO SI ESTAS EN ESA PAGINA
     const url = window.location.href;
