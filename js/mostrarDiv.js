@@ -7,30 +7,15 @@ $(document).ready(function() {
     
     
 
-    /*$("#formulario").submit(function(e){
+    $("#formulario").submit(function(e){
 
             console.log(e);
             $("#cargando").fadeIn(2000);
             
             setTimeout(function(){
                 $("#cargando").fadeOut(1000);
-            },7000);
-    })*/
-
-    
-        $('#formulario').submit(function() {
-          $(this).ajaxSubmit({
-            error: function(xhr) {
-              status('Error: ' + xhr.status);
-            },
-           success: function(response) {
-            console.log(response);
-           }
-          });
-          //Very important line, it disable the page refresh.
-          return false;
-        });
-     
+            },7000)
+    })
 
 
     $("input").keyup(function(){

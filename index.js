@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const routes = require('./routes');
 const middleaware = require('./middlewares/index');
 const bodyParser = require('body-parser');
-const request = require('request');
 
 
 
