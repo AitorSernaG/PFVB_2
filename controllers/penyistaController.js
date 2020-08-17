@@ -18,15 +18,35 @@ exports.nuevoPenyista = async (req, res, next) => {
     try {
 
         if(req.body.email !== penyistaEmail){
+
+            if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null)
+            {
+              return res.json({"responseError" : "something goes to wrong"});
+            }
+            const secretKey = "6LcE578ZAAAAAD74sUJSmskXWQVBhtKrPYDVDyWN";
+           
+            const verificationURL = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&amp;response=" + req.body['g-recaptcha-response'] + "&amp;remoteip=" + req.connection.remoteAddress;
+           
+            request(verificationURL,function(error,response,body) {
+              body = JSON.parse(body);
+           
+              if(body.success !== undefined && !body.success) {
+                return res.json({"responseError" : "Failed captcha verification"});
+              }
+              res.json({"responseSuccess" : "Sucess"});
+            });
+            
             usu = await penyista.save();
             console.log('peñista guardado');
             const respuesta = await {nombre: req.body.nombre};
+
+
             
             setTimeout(function(){
                 res.render('../views/registrado.ejs', {
                 respuesta
             });
-            },8000);   
+            },12000);   
         } 
     }catch (error) {
         
