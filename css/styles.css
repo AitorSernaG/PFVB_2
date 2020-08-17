@@ -208,8 +208,8 @@ hr {
     color: #343a40;
 }
 
-.captcha{
-    margin: auto;
+.g-recaptcha{
+    display: inline-block;
 }
 
 /*SPINNER*/
