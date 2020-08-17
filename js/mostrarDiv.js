@@ -18,11 +18,10 @@ $(document).ready(function() {
     })
 
 
-   /$("input").keyup(function(){
+  /* $("input").keyup(function(){
         let contador; 
 
-        if($("#nombre").val().length < 1 || $("#apellidos").val().length < 1 || $("#poblacion").val().length < 1 || $("#email").val().length < 1 
-        || $("#telefono").val().length < 9 || $("#telefono").val().length > 9){
+        if($("#nombre").val().length < 1 || $("#apellidos").val().length < 1 || $("#poblacion").val().length < 1 || $("#email").val().length < 1 ){
             contador = 1;
         }else{
             contador = 0;
@@ -53,7 +52,7 @@ $(document).ready(function() {
                 
             } 
            
-    })
+    })*/
 
     $("select").change(function(){
 
@@ -66,10 +65,9 @@ $(document).ready(function() {
 
 });
 
-
 function enableBtn(){
     document.getElementById("enviar").disabled = false;
-}
+   }
 
 /// PONER UN BOTON ACTIVO SI ESTAS EN ESA PAGINA
     const url = window.location.href;
