@@ -68,6 +68,10 @@ $(document).ready(function() {
 // activa el boton con el captcha
 function enableBtn(){
     document.getElementById("enviar").disabled = false;
+
+    setTimeout(function(){
+        document.getElementById("enviar").disabled = true;
+    },59000)
 }
 
 /// PONER UN BOTON ACTIVO SI ESTAS EN ESA PAGINA
