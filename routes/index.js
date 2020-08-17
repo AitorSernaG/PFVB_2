@@ -5,7 +5,7 @@ const fs = require('fs');
 const ControladorTexto = require('../controllers/ControladorTexto');
 const PenyistaControlador = require('../controllers/penyistaController');
 const Penyista = require('../models/Penyista');
-
+request = require('request');
 
 
 
@@ -29,7 +29,25 @@ module.exports = function () {
     });
 
     // agregamos un nuevo peñista con los datos del formulario a la base de datos, solo en caso de que el mail no coincida
-    router.post('/contacto', PenyistaControlador.nuevoPenyista);
+    router.post('/contacto', PenyistaControlador.nuevoPenyista, function(req,res){
+
+        if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null)
+        {
+          return res.json({"responseError" : "something goes to wrong"});
+        }
+        const secretKey = "6LcE578ZAAAAAD74sUJSmskXWQVBhtKrPYDVDyWN";
+      
+        const verificationURL = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&amp;response=" + req.body['g-recaptcha-response'] + "&amp;remoteip=" + req.connection.remoteAddress;
+      
+        request(verificationURL,function(error,response,body) {
+          body = JSON.parse(body);
+      
+          if(body.success !== undefined && !body.success) {
+            return res.json({"responseError" : "Failed captcha verification"});
+          }
+          res.json({"responseSuccess" : "Sucess"});
+        });
+    });
 
 
     router.get('/registrado', (req,res,next) => {
