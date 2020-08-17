@@ -208,6 +208,10 @@ hr {
     color: #343a40;
 }
 
+.captcha{
+    margin: auto;
+}
+
 /*SPINNER*/
 .sk-circle {
     margin: auto;

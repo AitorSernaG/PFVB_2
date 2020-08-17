@@ -5,7 +5,6 @@
 
 $(document).ready(function() {
     
-    
 
     $("#formulario").submit(function(e){
 
@@ -16,43 +15,6 @@ $(document).ready(function() {
                 $("#cargando").fadeOut(1000);
             },7000);
     })
-
-
-  /* $("input").keyup(function(){
-        let contador; 
-
-        if($("#nombre").val().length < 1 || $("#apellidos").val().length < 1 || $("#poblacion").val().length < 1 || $("#email").val().length < 1 ){
-            contador = 1;
-        }else{
-            contador = 0;
-        }
-
-       
-        if(contador == 1){
-            $("#enviar").attr("disabled", true);
-            }else if(contador == 0){
-
-                $('#opcion').change(function(){
-
-                    if($('#opcion').val() == 'no' ){
-                        $("#enviar").attr("disabled", false);
-                    }else if($('#opcion').val() == 'si'){
-
-                        $("#enviar").attr("disabled", true);
-
-                        $('#abono').keyup(function(){
-                            if($("#abono").val().length > 0){
-                                $("#enviar").attr("disabled", false);
-                            }else{
-                                $("#enviar").attr("disabled", true);
-                            }
-                        }) 
-                    }
-                })
-                
-            } 
-           
-    })*/
 
     $("select").change(function(){
 
@@ -65,11 +27,48 @@ $(document).ready(function() {
         }
     })
 
+
+                    /* $("input").keyup(function(){
+                            let contador; 
+
+                            if($("#nombre").val().length < 1 || $("#apellidos").val().length < 1 || $("#poblacion").val().length < 1 || $("#email").val().length < 1 ){
+                                contador = 1;
+                            }else{
+                                contador = 0;
+                            }   
+                            if(contador == 1){
+                                $("#enviar").attr("disabled", true);
+                                }else if(contador == 0){
+
+                                    $('#opcion').change(function(){
+
+                                        if($('#opcion').val() == 'no' ){
+                                            $("#enviar").attr("disabled", false);
+                                        }else if($('#opcion').val() == 'si'){
+
+                                            $("#enviar").attr("disabled", true);
+
+                                            $('#abono').keyup(function(){
+                                                if($("#abono").val().length > 0){
+                                                    $("#enviar").attr("disabled", false);
+                                                }else{
+                                                    $("#enviar").attr("disabled", true);
+                                                }
+                                            }) 
+                                        }
+                                    })
+                                    
+                                } 
+                            
+                        })*/
+
 });
 
+
+// activa el boton con el captcha
 function enableBtn(){
     document.getElementById("enviar").disabled = false;
-   }
+}
 
 /// PONER UN BOTON ACTIVO SI ESTAS EN ESA PAGINA
     const url = window.location.href;
