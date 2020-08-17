@@ -9,8 +9,6 @@ $(document).ready(function() {
 
     $("#formulario").submit(function(e){
 
-        
-
             console.log(e);
             $("#cargando").fadeIn(2000);
             
@@ -71,9 +69,7 @@ $(document).ready(function() {
 });
 
 
-function recaptchaCallback() {
-    $('#submitBtn').removeAttr('disabled');
-};
+
 
 /// PONER UN BOTON ACTIVO SI ESTAS EN ESA PAGINA
     const url = window.location.href;
