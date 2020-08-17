@@ -5,8 +5,7 @@
 
 $(document).ready(function() {
     
-    const respuesta = grecaptcha.getResponse();
-    console.log(respuesta);
+    
 
     $("#formulario").submit(function(e){
 
