@@ -67,8 +67,11 @@ $(document).ready(function() {
 });
 
 
+document.getElementById("enviar").disabled = true;
 
-
+function enableBtn(){
+    document.getElementById("enviar").disabled = false;
+   }
 
 
 /// PONER UN BOTON ACTIVO SI ESTAS EN ESA PAGINA
