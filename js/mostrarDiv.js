@@ -9,17 +9,20 @@ $(document).ready(function() {
 
     $("#formulario").submit(function(e){
 
+
+
             console.log(e);
             $("#cargando").fadeIn(2000);
             
             setTimeout(function(){
                 $("#cargando").fadeOut(1000);
-            },7000)
+            },7000);
     })
 
 
     $("input").keyup(function(){
         let contador; 
+        const response = grecaptcha.getResponse();
 
         if($("#nombre").val().length < 1 || $("#apellidos").val().length < 1 || $("#poblacion").val().length < 1 || $("#email").val().length < 1 
         || $("#telefono").val().length < 9 || $("#telefono").val().length > 9){
@@ -35,14 +38,14 @@ $(document).ready(function() {
 
             $('#opcion').change(function(){
 
-                if($('#opcion').val() == 'no'){
+                if($('#opcion').val() == 'no' && response.length !== 0){
                     $("#enviar").attr("disabled", false);
                 }else if($('#opcion').val() == 'si'){
 
                     $("#enviar").attr("disabled", true);
 
                     $('#abono').keyup(function(){
-                        if($("#abono").val().length > 0){
+                        if($("#abono").val().length > 0 && response.length !== 0){
                             $("#enviar").attr("disabled", false);
                         }else{
                             $("#enviar").attr("disabled", true);
@@ -67,11 +70,6 @@ $(document).ready(function() {
 });
 
 
-document.getElementById("enviar").disabled = true;
-
-function enableBtn(){
-    document.getElementById("enviar").disabled = false;
-   }
 
 
 /// PONER UN BOTON ACTIVO SI ESTAS EN ESA PAGINA
