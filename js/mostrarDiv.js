@@ -28,14 +28,14 @@ $(document).ready(function() {
             contador = 0;
         }
 
-       
-            if(contador == 1){
-                $("#enviar").attr("disabled", true);
+       function enableBtn(){
+        if(contador == 1){
+            $("#enviar").attr("disabled", true);
             }else if(contador == 0){
 
                 $('#opcion').change(function(){
 
-                    if($('#opcion').val() == 'no'){
+                    if($('#opcion').val() == 'no' ){
                         $("#enviar").attr("disabled", false);
                     }else if($('#opcion').val() == 'si'){
 
@@ -52,6 +52,8 @@ $(document).ready(function() {
                 })
                 
             } 
+       }
+           
        
        
         
