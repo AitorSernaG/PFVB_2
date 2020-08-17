@@ -58,8 +58,10 @@ $(document).ready(function() {
 
         if($('#opcion').val() == 'si'){
             $('#abono').fadeIn(500);
+            $("abono").attr("required", true);
         }else{
             $('#abono').fadeOut(500);
+            $("abono").attr("required", false);
         }
     })
 
