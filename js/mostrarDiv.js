@@ -27,6 +27,24 @@ $(document).ready(function() {
         }
     })
 
+    $("#ver").click(function(){
+
+        $('#informacion').fadeIn(1000);
+            // $('#informacion').css("display", "block");
+            $('#ver').css("display", "none");
+            $('#nover').css("display", "block");
+            
+    })
+
+    $("#nover").click(function(){
+     
+        $('#informacion').fadeOut(1000);
+        // $('#informacion').css("display", "none");
+        $('#ver').css("display", "block");
+        $('#nover').css("display", "none");
+        
+    })
+
 
                     /* $("input").keyup(function(){
                             let contador; 
