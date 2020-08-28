@@ -22,6 +22,10 @@ const penyistaSchema = new Schema({
         type: String,
         trim: true
     },
+    dni: {
+        type: String,
+        trim: true
+    },
     abonado: {
         type: String,
         trim: true
