@@ -10,14 +10,14 @@ exports.nuevoPenyista = async (req, res, next) => {
     
         const penyista = new Penyista(req.body); // datos que se envian en el formulario
         //const penyistas = await Penyista.find({}); // preparado para traer todos los registros de la base de datos con el modelo
-        const penyistaEmail = await Penyista.find({"email": req.body.email}) // datos traidos de la base de datos con el modelo
+        const penyistaDni = await Penyista.find({"dni": req.body.dni}) // datos traidos de la base de datos con el modelo
         //console.log(penyistas);
         console.log(req.body.email);
         
     
     try {
 
-        if(req.body.email !== penyistaEmail){
+        if(req.body.dni !== penyistaDni){
             usu = await penyista.save();
             console.log('peñista guardado');
             const respuesta = await {nombre: req.body.nombre};
@@ -31,8 +31,8 @@ exports.nuevoPenyista = async (req, res, next) => {
     }catch (error) {
         
         console.log(error);
-        console.log("Ya existe un peñista con ese email");
-        const respuesta = await {respuesta: "lo sentimos el usuario ya existe con ese email: ", email: req.body.email };
+        console.log("Ya existe un peñista con ese DNI");
+        const respuesta = await {respuesta: "lo sentimos el usuario ya existe con ese DNI: ", dni: req.body.dni };
         
         setTimeout(function(){
             res.render('../views/error.ejs', {
