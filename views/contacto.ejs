@@ -22,15 +22,15 @@
 
                         <div class="form-group col-xs-12 col-sm-10 col-xl-8 mx-auto">
                             <label for="nombre">Nombre:</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Introduce tu nombre" name="nombre" required>
+                            <input type="text" class="form-control" id="nombre" placeholder="Introduce tu nombre" name="nombre" pattern="[A-Za-z]" required>
                         </div>
                         <div class="form-group col-xs-12 col-sm-10 col-xl-8 mx-auto">
                             <label for="apellidos">Apellidos:</label>
-                            <input type="text" class="form-control" id="apellidos" placeholder="Introduce tus apellidos" name="apellidos" required>
+                            <input type="text" class="form-control" id="apellidos" placeholder="Introduce tus apellidos" name="apellidos" pattern="[A-Za-z]" required>
                         </div>
                         <div class="form-group col-xs-12 col-sm-10 col-xl-8 mx-auto">
                             <label for="poblacion">Población:</label>
-                            <input type="text" class="form-control" id="poblacion" placeholder="Introduce tu población" name="poblacion" required>
+                            <input type="text" class="form-control" id="poblacion" placeholder="Introduce tu población" name="poblacion" pattern="[A-Za-z]" required>
                         </div>
                         <div class="form-group col-xs-12 col-sm-10 col-xl-8 mx-auto">
                             <label for="email">Email:</label>
@@ -42,7 +42,7 @@
                         </div>
                         <div class="form-group col-xs-12 col-sm-10 col-xl-8 mx-auto mb-4">
                             <label for="dni">DNI:</label>
-                            <input type="text" class="form-control" id="dni" placeholder="Introduce tu DNI (8 digitos y 1 letra al final)" name="dni" pattern="[0-9]{8}[A-Z]{1}" required>
+                            <input type="text" class="form-control" id="dni" placeholder="Introduce tu DNI (8 digitos y 1 letra al final)" name="dni" pattern="[0-9]{8}[A-Za-z]{1}" required>
                         </div>
                         <div class="form-group col-xs-12 col-sm-10 col-xl-8 mx-auto mb-4">
                             <label for="opcion">¿Eres abonado al Elche cf?</label>
