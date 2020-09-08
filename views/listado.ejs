@@ -8,16 +8,30 @@
 
             <div class="col col-xs-8 col-xl-8 m-5 mx-auto  bg-dark fondo">
 
-                <div class="bg-info p-1 mx-auto col-sm-8 m-5 rounded text-white">
+                <div class="bg-info p-1 mx-auto col-sm-8 mt-5 mb-3 rounded text-white">
                     <h3 class="text-center pt-2 pb-1 mt-1">Listado de socios registrados</h3>
                 </div>
 
+                <!--numero abonados-->
+                        <div class="col-sm-8 mx-auto mb-4 mt-4">
+                            <button type="submit" class="btn btn-info btn-block " id="ver">Ver nº abonados</button>
+                            <button type="submit" class="btn btn-danger btn-block" id="nover"  style="display: none;">Ocultar nº abonados</button>
+                        </div>
+
+                        <div class="col-sm-6 mx-auto mb-3 text-center" id="informacion" style="display: none;">
+                            <li  class="text-center list-group-item mx-auto col-sm-8 rounded-top border-info">Peñistas registrados: <%- penyistasNumero %> </li>
+                            <li  class="text-center list-group-item mx-auto col-sm-8 border-info">Abonados: <%- penyistasAbonadosNumero %> </li>
+                            <li  class="text-center list-group-item mx-auto col-sm-8 rounded-bottom border-info">No abonados: <%- penyistasNoAbonadosNumero %> </li>   
+                        </div>
+                     <!--fin numero abonados-->
                 
-                <ul class="list-group col-sm-8 col-md-6 mx-auto mb-5">
+                <ul class="col-sm-6 mx-auto mb-5 rounded-top rounded-bottom">
                     <% penyistas.forEach( (penyista) => { %>
-                        <li class="list-group-item">Nombre: <%- penyista.nombre%> <%- penyista.apellidos%><br>
-                                                    Población: <%- penyista.poblacion%><br>
-                                                    Abonado: <%- penyista.abonado%></li>
+                        <li class="list-group-item justify-content-center border-info">
+                            Nombre: <%- penyista.nombre%> <%- penyista.apellidos%><br>
+                            Población: <%- penyista.poblacion%><br>
+                            Abonado: <%- penyista.abonado%>
+                        </li>
                       <% }) %>
                 </ul> 
                

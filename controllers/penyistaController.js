@@ -50,17 +50,23 @@ exports.nuevoPenyista = async (req, res, next) => {
 exports.listadoPenyistas = async (req, res, next) => {
 
         const penyista = new Penyista(req.body); // estos son los datos que se envian en el formulario
-        const penyistas = await Penyista.find({}); // preparado para traer todos los registros de la base de datos con el modelo
+        const penyistas = await Penyista.find({}).sort({nombre:1}); // preparado para traer todos los registros de la base de datos con el modelo
         const penyistasAbonados = await Penyista.find({"abonado":  "si"}, {nombre:1,apellidos:1,abono:1}); 
         const penyistasNoAbonados = await Penyista.find({"abonado":  "no"}, {nombre:1,apellidos:1,abono:1});
         const penyistaPoblacion = await Penyista.find({"poblacion": "Albatera"}, {nombre:1,apellidos:1,abono:1});
+        const penyistasNumero = await Penyista.find({}).count();
+        const penyistasAbonadosNumero = await Penyista.find({"abonado":  "si"}, {nombre:1,apellidos:1,abono:1}).count(); 
+        const penyistasNoAbonadosNumero = await Penyista.find({"abonado":  "no"}, {nombre:1,apellidos:1,abono:1}).count();
         //console.log(penyistas);
 
         res.render('../views/listado.ejs', {
             penyistas, // esta variable se puede usar en la pagina para mostrar datos del bd
             penyistasAbonados,
             penyistasNoAbonados,
-            penyistaPoblacion
+            penyistaPoblacion,
+            penyistasNumero,
+            penyistasAbonadosNumero,
+            penyistasNoAbonadosNumero
         });
 }
 
