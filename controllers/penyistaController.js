@@ -10,14 +10,16 @@ exports.nuevoPenyista = async (req, res, next) => {
     
         const penyista = new Penyista(req.body); // datos que se envian en el formulario
         //const penyistas = await Penyista.find({}); // preparado para traer todos los registros de la base de datos con el modelo
-        const penyistaDni = await Penyista.find({"dni": penyista.dni },{dni:1}) // datos traidos de la base de datos con el modelo
+        const penyistaDni = await Penyista.find({"dni": req.body.dni},{"dni":1,"_id":0}) // datos traidos de la base de datos con el modelo
         //console.log(penyistas);
+        const dniUser = await {dni: req.body.dni};
+        console.log(dniUser);
         console.log(penyistaDni);
         
     
     try {
 
-        if(req.body.dni !== penyistaDni){
+        if(dniUser !== penyistaDni){
             usu = await penyista.save();
             console.log('peñista guardado');
             const respuesta = await {nombre: req.body.nombre};
