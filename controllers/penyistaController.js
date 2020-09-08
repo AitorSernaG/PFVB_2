@@ -10,9 +10,9 @@ exports.nuevoPenyista = async (req, res, next) => {
     
         const penyista = new Penyista(req.body); // datos que se envian en el formulario
         //const penyistas = await Penyista.find({}); // preparado para traer todos los registros de la base de datos con el modelo
-        const penyistaDni = await Penyista.find({"dni": req.body.dni},{dni:1}) // datos traidos de la base de datos con el modelo
+        const penyistaDni = await Penyista.find({"dni": penyista.dni },{dni:1}) // datos traidos de la base de datos con el modelo
         //console.log(penyistas);
-        console.log(req.body.dni);
+        console.log(penyistaDni);
         
     
     try {
