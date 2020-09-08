@@ -24,12 +24,12 @@ module.exports = function () {
         res.render('../views/nosotros.ejs');
     });
 
-    router.get('/contacto', async (req,res,next) => { 
-        res.render('../views/contacto.ejs');
+    router.get('/registro', async (req,res,next) => { 
+        res.render('../views/registro.ejs');
     });
 
-    // agregamos un nuevo peñista con los datos del formulario a la base de datos, solo en caso de que el mail no coincida
-    router.post('/contacto', PenyistaControlador.nuevoPenyista);
+    // agregamos un nuevo peñista con los datos del formulario a la base de datos, solo en caso de que el dni no coincida
+    router.post('/registro', PenyistaControlador.nuevoPenyista);
 
 
     router.get('/registrado', (req,res,next) => {
