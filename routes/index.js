@@ -28,6 +28,11 @@ module.exports = function () {
         res.render('../views/registro.ejs');
     });
 
+    router.get('/privacidad', async (req,res,next) => { 
+        res.render('../views/privacidad.ejs');
+    });
+
+
     // agregamos un nuevo peñista con los datos del formulario a la base de datos, solo en caso de que el dni no coincida
     router.post('/registro', PenyistaControlador.nuevoPenyista);
 
