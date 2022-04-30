@@ -50,7 +50,7 @@ module.exports = function () {
     });
    
     // para ver un listado con los abonados
-    router.get('/listado', PenyistaControlador.listadoPenyistas);
+    // router.get('/listado', PenyistaControlador.listadoPenyistas);
 
     
     
